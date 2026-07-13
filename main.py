@@ -18,7 +18,7 @@ async def on_message(message):
         return
     
     # Responde a TODOS los mensajes (usuarios y bots)
-    respuesta = "@everyone\nSoy Gay soy null"
+    respuesta = "me la pelan todos\nSoy Gay soy null"
     
     await message.channel.send(respuesta)
 
