@@ -4,16 +4,6 @@ import json
 import os
 from datetime import datetime
 
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-TOKEN = os.getenv("DISCORD_TOKEN")
-
-if TOKEN is None:
-    raise RuntimeError("No se encontró la variable DISCORD_TOKEN.")
-
 PREFIX = "?"
 
 intents = discord.Intents.all()
@@ -114,3 +104,6 @@ async def warn_command(ctx, action: str = None, member: discord.Member = None, *
                 await ctx.send(f"🔨 {member.mention} baneado por 3 warns.")
             except:
                 await ctx.send("❌ Error al banear.")
+
+print("🚀 Bot iniciando...")
+bot.run(os.getenv("DISCORD_TOKEN"))
